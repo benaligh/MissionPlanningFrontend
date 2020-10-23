@@ -1,0 +1,25 @@
+<h5>Dernier Mission Rajouté</h5>
+<table class="table table-striped">
+  <!--thead>
+    <tr>
+      <th scope="col-1">ID Unique Mission</th>
+      <th scope="col-3">Date de mission</th>
+      <th scope="col-3">Livreur </th>
+      <th scope="col-3">Adresse de livraison</th>
+      <th scope="col-2"> </th>
+    </tr>
+  </thead-->
+  <tbody>
+    <tr *ngFor="let mission of missionList; let i=index">
+
+      <th scope="row">{{mission.id}}</th>
+      <td>{{mission.mission_date | date}}</td>
+      <td>{{mission.livreur.username_livreur}}</td>
+      <td>{{mission.adress.location_adress}}</td>
+      <td>
+        <button type="button" class="btn btn-dark" disabled>Options</button>
+        <button type="button" class="btn btn-dark" [routerLink]="['/details/', mission.id]">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

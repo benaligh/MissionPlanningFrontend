@@ -1,0 +1,13 @@
+.app-top {
+  margin: 0 0 3em;
+}
+
+.app-calendar {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.container{
+  margin-top: 30px;
+  padding-top: 30px;
+}

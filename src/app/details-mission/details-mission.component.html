@@ -1,0 +1,29 @@
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Détails Mission</div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <div>
+        <strong>ID: {{ detailsMission.id }}</strong>
+    </div>
+
+    <div>
+        <strong>Date: {{ detailsMission.mission_date | date }}</strong>
+    </div>
+
+    <div>
+        <strong>Livreur: {{ detailsMission.livreur.username_livreur }}</strong>
+    </div>
+
+    <div>
+      <strong>Moto: {{ detailsMission.moto.matricule_moto }}</strong>
+  </div>
+    <div>
+      <strong>adress: {{ detailsMission.adress.location_adress }}</strong>
+  </div>
+    </h5>
+    <p class="card-text"></p>
+  </div>
+  <div class="card-footer bg-transparent border-dark">
+    <a href="#" [routerLink]="['/']" class="btn btn-primary">Close</a>
+  </div>
+</div>
